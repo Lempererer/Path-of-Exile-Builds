@@ -1,11 +1,69 @@
 /* || GENERAL STYLES */
 
 body {
-    background-color:black;
+    background-color: #0A0F22;
+    color: #EAEBF2;
 }
 
 h1 {
     font-family: "Roboto";
+    text-align: center;
+    color: #EAEBF2;
+}
+
+h2 {
+    font-family: "Roboto";
     text-align: left;
-    color: white;
+    color: #EAEBF2;
+}
+
+a {
+    font-family: "Roboto";
+}
+
+p {
+    font-family: "Roboto";
+}
+
+/* || SITEWIDE */
+
+.navigation_bar {
+    float: left;
+    display: inline;
+    font-size: 18px;
+    padding: 8px 8px 8px 8px;
+    background-color: #24324E;
+    position: absolute;
+    width: calc(100% - 26px);
+}
+
+.navigation_bar_left a {
+    text-decoration: none;
+    color: #EAEBF2;
+    text-align: center;
+    padding: 8px 8px 8px 8px;
+    float: left;
+    font-weight: bold;
+}
+
+.navigation_bar_right a {
+    text-decoration: none;
+    color: #EAEBF2;
+    text-align: center;
+    padding: 8px 8px 8px 8px;
+    float: right;
+    font-weight: bold;
+}
+
+.navigation_bar a:hover {
+    background-color: #4D5E87;
+}
+
+.navigation_bar__active_page--highlight {
+    background-color: #4D5E87;
+}
+
+.navigation_bar__active_page--highlight:hover {
+    background-color: #B7C1E5!important;
+    color: #0A0F22;
 }
