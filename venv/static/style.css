@@ -67,3 +67,71 @@ p {
     background-color: #B7C1E5!important;
     color: #0A0F22;
 }
+
+/* || Builds */
+
+.main-hand {
+    grid-area: main-hand;
+}
+
+.helmet {
+    grid-area: helmet;
+}
+
+.off-hand {
+    grid-area: off-hand;
+}
+
+.body_armour {
+    grid-area: body_armour;
+}
+
+.amulet {
+    grid-area: amulet;
+}
+
+.ring_1 {
+    grid-area: ring_1;
+}
+
+.ring_2 {
+    grid-area: ring_2;
+}
+
+.gloves {
+    grid-area: gloves;
+}
+
+.boots {
+    grid-area: boots;    
+}
+
+.belt {
+    grid-area: belt;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'main-hand   main-hand   .           helmet      .           off-hand    off-hand'
+        'main-hand   main-hand   .           helmet      .           off-hand    off-hand'
+        'main-hand   main-hand   .           body_armour .           off-hand    off-hand'
+        'main-hand   main-hand   .           body_armour .           off-hand    off-hand'
+        'main-hand   main-hand   .           body_armour amulet      off-hand    off-hand'
+        'gloves      gloves      ring_1      body_armour ring_2      boots       boots'
+        'gloves      gloves      .           belt        .           boots       boots';
+    gap: 10px;
+    background-color: #24324E;
+    padding: 10px;
+    float: left;
+}
+
+.grid-container > div {
+    background-color: #4D5E87;
+    text-align: center;
+    padding: 10px;
+    font-size: 30px;
+    font-family: "Roboto";
+    display: flex;
+    align-items: center;
+  }

@@ -34,7 +34,7 @@ def builds():
 @app.route("/build__impale-crit_cyclone_slayer")
 def build():
     cursor = get_db().cursor()
-    sql = "SELECT * FROM items"
+    sql = "SELECT item_image FROM items"
     cursor.execute(sql)
     results = cursor.fetchall()
     return render_template("build__impale-crit_cyclone_slayer.html", results = results)
