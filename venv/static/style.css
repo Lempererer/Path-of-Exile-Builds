@@ -130,9 +130,7 @@ p {
 
 .grid-container > div {
     background-color: #4D5E87;
-    text-align: center;
     padding: 10px;
-    font-size: 30px;
     font-family: "Roboto";
     display: flex;
     align-items: center;
@@ -142,30 +140,4 @@ p {
 .grid-container > div:hover {
     background-color: #B7C1E5;
     transition: 0.2s;
-}
-
-.dropdown {
-    position: relative;
-    height: 90%;
-    width: 0;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #212121;
-    overflow-x: hidden;
-    padding-top: 60px;
-    transition: 0.5s;
-}
-
-.dropdown_content {
-    background-color: rgb(33, 47, 61);
-}
-
-.dropdown_content a:hover {
-    background-color: #4B4B4B;
-    color: white;
-}
-
-.dropdown:hover .dropdown_content {
-    display: block;
 }
