@@ -46,15 +46,6 @@ p {
     font-weight: bold;
 }
 
-.navigation_bar_right a {
-    text-decoration: none;
-    color: #EAEBF2;
-    text-align: center;
-    padding: 8px 8px 8px 8px;
-    float: right;
-    font-weight: bold;
-}
-
 .navigation_bar a:hover {
     background-color: #4D5E87;
     transition: 0.2s;
