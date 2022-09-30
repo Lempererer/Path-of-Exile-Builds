@@ -18,7 +18,7 @@
 </head>
 
 <body>
-
+    <!-- nav bar -->
     <div class="navigation_bar">
 
         <div class="navigation_bar_left">
@@ -37,14 +37,18 @@
 
     {%for item in results%}
 
+    <!-- Displays name of build from database -->
     <h1>
         {{ item[0] }}
     </h1>
-
+    <!-- This is the grid used to display the items -->
     <div class="grid-container">
 
-        <div class="amulet">
-            <img src="{{ url_for('static', filename='Images/' + item[1])}}">
+        <!-- Displays the specified image. 'item[1]' is used so that the same code can be used for all builds -->
+        <div class="amulet" onclick="open_amulet_data_img()">
+            <a href="#">
+                <img src="{{ url_for('static', filename='Images/' + item[1])}}">
+            </a>
         </div>
 
         <div class="belt">
@@ -85,11 +89,52 @@
         
     </div>
 
-    <div class="item_description">
+    <!-- These are images which appear when you click on an item -->
+    <div class="item_data_img" id="amulet_data_img">
         <img src="{{ url_for('static', filename='Images/' + item[11])}}">
     </div>
 
+    <div class="item_data_img" id="belt_data_img">
+        <img src="{{ url_for('static', filename='Images/' + item[12])}}">
+    </div>
+    
+    <div class="item_data_img" id="body_armour_data_img">
+        <img src="{{ url_for('static', filename='Images/' + item[13])}}">
+    </div>
+
+    <div class="item_data_img" id="boots_data_img">
+        <img src="{{ url_for('static', filename='Images/' + item[14])}}">
+    </div>
+
+    <div class="item_data_img" id="gloves_data_img">
+        <img src="{{ url_for('static', filename='Images/' + item[15])}}">
+    </div>
+
+    <div class="item_data_img" id="helmet_data_img">
+        <img src="{{ url_for('static', filename='Images/' + item[16])}}">
+    </div>
+
+    <div class="item_data_img" id="main_hand_data_img">
+        <img src="{{ url_for('static', filename='Images/' + item[17])}}">
+    </div>
+
+    <div class="item_data_img" id="off_hand_data_img">
+        <img src="{{ url_for('static', filename='Images/' + item[18])}}">
+    </div>
+
+    <div class="item_data_img" id="ring_1_data_img">
+        <img src="{{ url_for('static', filename='Images/' + item[19])}}">
+    </div>
+
+    <div class="item_data_img" id="ring_2_data_img">
+        <img src="{{ url_for('static', filename='Images/' + item[20])}}">
+    </div>
+
     {%endfor%}
+
+    <script src ="scripts.js">
+
+    </script>
 
 </body>
 </html>

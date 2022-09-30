@@ -39,7 +39,8 @@ def builds():
 def impale_cyclone():
     cursor = get_db().cursor()
     sql = '''
-    SELECT build_name, amulet.amulet_img, belt.belt_img, body_armour.body_armour_img, boots.boots_img, gloves.gloves_img, helmet.helmet_img, main_hand.main_hand_img, off_hand.off_hand_img, ring_1.ring_img, ring_2.ring_img
+    SELECT build_name, amulet.amulet_img, belt.belt_img, body_armour.body_armour_img, boots.boots_img, gloves.gloves_img, helmet.helmet_img, main_hand.main_hand_img, off_hand.off_hand_img, ring_1.ring_img, ring_2.ring_img, 
+    amulet.amulet_data_img, belt.belt_data_img, body_armour.body_armour_data_img, boots.boots_data_img, gloves.gloves_data_img, helmet.helmet_data_img, main_hand.main_hand_data_img, off_hand.off_hand_data_img, ring_1.ring_data_img, ring_2.ring_data_img
     FROM builds
     JOIN amulet ON builds.amulet_id = amulet.amulet_id
     JOIN belt ON builds.belt_id = belt.belt_id
@@ -62,7 +63,9 @@ def impale_cyclone():
 def righteous_fire():
     cursor = get_db().cursor()
     sql = '''
-    SELECT build_name, amulet.amulet_img, belt.belt_img, body_armour.body_armour_img, boots.boots_img, gloves.gloves_img, helmet.helmet_img, main_hand.main_hand_img, off_hand.off_hand_img, ring_1.ring_img, ring_2.ring_img FROM builds 
+    SELECT build_name, amulet.amulet_img, belt.belt_img, body_armour.body_armour_img, boots.boots_img, gloves.gloves_img, helmet.helmet_img, main_hand.main_hand_img, off_hand.off_hand_img, ring_1.ring_img, ring_2.ring_img, 
+    amulet.amulet_data_img, belt.belt_data_img, body_armour.body_armour_data_img, boots.boots_data_img, gloves.gloves_data_img, helmet.helmet_data_img, main_hand.main_hand_data_img, off_hand.off_hand_data_img, ring_1.ring_data_img, ring_2.ring_data_img
+    FROM builds
     JOIN amulet ON builds.amulet_id = amulet.amulet_id
     JOIN belt ON builds.belt_id = belt.belt_id
     JOIN body_armour ON builds.body_armour_id = body_armour.body_armour_id
@@ -73,6 +76,7 @@ def righteous_fire():
     JOIN off_hand ON builds.off_hand_id = off_hand.off_hand_id
     JOIN ring_1 ON builds.ring_1_id = ring_1.ring_id
     JOIN ring_2 ON builds.ring_2_id = ring_2.ring_id
+    WHERE build_name='Righteous Fire/Fire Trap';
     '''
     cursor.execute(sql)
     results = cursor.fetchall()

@@ -132,3 +132,9 @@ p {
     background-color: #B7C1E5;
     transition: 0.2s;
 }
+
+.item_data_img {
+    float: left;
+    width: 0;
+    overflow-x: hidden;
+}
