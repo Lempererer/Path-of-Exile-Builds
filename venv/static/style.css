@@ -62,16 +62,16 @@ p {
 
 /* || Builds */
 
-.main-hand {
-    grid-area: main-hand;
+.main_hand {
+    grid-area: main_hand;
 }
 
 .helmet {
     grid-area: helmet;
 }
 
-.off-hand {
-    grid-area: off-hand;
+.off_hand {
+    grid-area: off_hand;
 }
 
 .body_armour {
@@ -105,11 +105,11 @@ p {
 .grid-container {
     display: grid;
     grid-template-areas:
-        'main-hand   main-hand   .           helmet      .           off-hand    off-hand'
-        'main-hand   main-hand   .           helmet      .           off-hand    off-hand'
-        'main-hand   main-hand   .           body_armour .           off-hand    off-hand'
-        'main-hand   main-hand   .           body_armour .           off-hand    off-hand'
-        'main-hand   main-hand   .           body_armour amulet      off-hand    off-hand'
+        'main_hand   main_hand   .           helmet      .           off_hand    off_hand'
+        'main_hand   main_hand   .           helmet      .           off_hand    off_hand'
+        'main_hand   main_hand   .           body_armour .           off_hand    off_hand'
+        'main_hand   main_hand   .           body_armour .           off_hand    off_hand'
+        'main_hand   main_hand   .           body_armour amulet      off_hand    off_hand'
         'gloves      gloves      ring_1      body_armour ring_2      boots       boots'
         'gloves      gloves      .           belt        .           boots       boots';
     gap: 10px;
@@ -134,7 +134,5 @@ p {
 }
 
 .item_data_img {
-    float: left;
-    width: 0;
-    overflow-x: hidden;
+    margin-left: 20%;
 }

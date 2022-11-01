@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- connects this html doc to the css doc: style.css -->
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <!-- gets Roboto font from Google API -->
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' />
+
+    <!-- title of the tab of application-->
+    <title>
+        Path of Exile Builds
+    </title>
+
+</head>
+
+
+<body>
+
+    <div class="navigation_bar">
+
+        <div class="navigation_bar_left">
+            <a href="/" class="navigation_bar__active_page--highlight">
+                PoE Builds
+            </a>
+        
+            <a href="/builds">
+                Builds
+            </a>
+        </div>
+
+    </div>
+
+    <br><br><br>
+
+    <h1>
+        Path of Exile Builds
+    </h1>
+
+    {%for item in results%}
+
+    <div class="item_data_img">
+        <img src="{{ url_for('static', filename='Images/' + item[0])}}">
+    </div>
+
+    {%endfor%}
+
+    <br>
+
+    <p>
+        Photo credit: poe.ninja
+    </p>
+    
+</body>
+</html>

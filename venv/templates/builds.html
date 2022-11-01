@@ -8,7 +8,7 @@
     <!-- connects this html doc to the css doc: style.css -->
     <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
     <!-- gets Roboto font from Google API -->
-    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' />
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'/>
     <!-- title of the tab of application-->
     <title>
         Path of Exile Builds
@@ -34,19 +34,107 @@
     <br><br><br>
 
     <div>
+        {%for item in build_name_results%}
         <ul>
             <li>
-                <a href="/impale_cyclone">
-                    Impale Cyclone
-                </a>
-            </li>
-            <li>
-                <a href="/righteous_fire">
-                    Righteous Fire
+                <a href="/builds/{{ item[0] }}">
+                    {{ item[0] }}
                 </a>
             </li>
         </ul>
+        {%endfor%}
     </div>
+
+    <form action="/add" method="post">
+
+        <h2>Create a new build: </h2>
+
+        <input type="text" placeholder="Build Name" name="builds_build_name_id">
+
+        <select name="select_body_armour">
+                <option value="" disabled selected>Body Armour</option>
+            {%for item in body_armour_results%}              
+                <option value={{ item[1] }}>{{ item[0] }}</option>
+            {% endfor %}
+        </select>
+
+        <select name="select_helmet">
+                <option value="" disabled selected>Helmet</option>
+            {%for item in helmet_results%}              
+                <option value={{ item[1] }}>{{ item[0] }}</option>
+            {% endfor %}
+        </select>
+
+        <select name="select_amulet">
+                <option value="" disabled selected>Amulet</option>
+            {%for item in amulet_results%}              
+                <option value={{ item[1] }}>{{ item[0] }}</option>
+            {% endfor %}
+        </select>
+
+        <select name="select_gloves">
+                <option value="" disabled selected>Gloves</option>
+            {%for item in gloves_results%}              
+                <option value={{ item[1] }}>{{ item[0] }}</option>
+            {% endfor %}
+        </select>
+
+        <select name="select_boots">
+                <option value="" disabled selected>Boots</option>
+            {%for item in boots_results%}              
+                <option value={{ item[1] }}>{{ item[0] }}</option>
+            {% endfor %}
+        </select>
+
+        <select name="select_ring_1">
+                <option value="" disabled selected>Ring 1</option>
+            {%for item in ring_results%}              
+                <option value={{ item[1] }}>{{ item[0] }}</option>
+            {% endfor %}
+        </select>
+
+        <select name="select_ring_2">
+                <option value="" disabled selected>Ring 2</option>
+            {%for item in ring_results%}              
+                <option value={{ item[1] }}>{{ item[0] }}</option>
+            {% endfor %}
+        </select>
+
+        <select name="select_main_hand">
+                <option value="" disabled selected>Main-hand</option>
+            {%for item in hand_results%}              
+                <option value={{ item[1] }}>{{ item[0] }}</option>
+            {% endfor %}
+        </select>
+
+        <select name="select_off_hand">
+                <option value="" disabled selected>Off-hand</option>
+            {%for item in hand_results%}              
+                <option value={{ item[1] }}>{{ item[0] }}</option>
+            {% endfor %}
+        </select>
+
+        <select name="select_belt">
+                <option value="" disabled selected>Belt</option>
+            {%for item in belt_results%}              
+                <option value={{ item[1] }}>{{ item[0] }}</option>
+            {% endfor %}
+        </select>
+
+        <input type="submit" value="add">
+    </form>
+
+<br><br><br>
+
+
+    <h2>
+        Please enter the build you would like to delete:
+    </h2>
+
+    <form action="/delete" method="post">
+        <input type="text" name="delete_builds_build_name_id" value="">
+        <input type="submit" value="delete">
+    </form>
 
 </body>
 </html>
