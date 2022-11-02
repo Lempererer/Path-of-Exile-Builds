@@ -59,70 +59,70 @@
         <input type="text" placeholder="Build Name" name="builds_build_name_id">
 
         <!-- dropdown menus so that user can select the specific item they want in a build from the database -->
-        <select name="select_body_armour">
+        <select name="select_body_armour" required>
                 <option value="" disabled selected>Body Armour</option>
             {%for item in body_armour_results%}              
                 <option value={{ item[1] }}>{{ item[0] }}</option>
             {% endfor %}
         </select>
 
-        <select name="select_helmet">
+        <select name="select_helmet" required>
                 <option value="" disabled selected>Helmet</option>
             {%for item in helmet_results%}              
                 <option value={{ item[1] }}>{{ item[0] }}</option>
             {% endfor %}
         </select>
 
-        <select name="select_amulet">
+        <select name="select_amulet" required>
                 <option value="" disabled selected>Amulet</option>
             {%for item in amulet_results%}              
                 <option value={{ item[1] }}>{{ item[0] }}</option>
             {% endfor %}
         </select>
 
-        <select name="select_gloves">
+        <select name="select_gloves" required>
                 <option value="" disabled selected>Gloves</option>
             {%for item in gloves_results%}              
                 <option value={{ item[1] }}>{{ item[0] }}</option>
             {% endfor %}
         </select>
 
-        <select name="select_boots">
+        <select name="select_boots" required>
                 <option value="" disabled selected>Boots</option>
             {%for item in boots_results%}              
                 <option value={{ item[1] }}>{{ item[0] }}</option>
             {% endfor %}
         </select>
 
-        <select name="select_ring_1">
+        <select name="select_ring_1" required>
                 <option value="" disabled selected>Ring 1</option>
             {%for item in ring_results%}              
                 <option value={{ item[1] }}>{{ item[0] }}</option>
             {% endfor %}
         </select>
 
-        <select name="select_ring_2">
+        <select name="select_ring_2" required>
                 <option value="" disabled selected>Ring 2</option>
             {%for item in ring_results%}              
                 <option value={{ item[1] }}>{{ item[0] }}</option>
             {% endfor %}
         </select>
 
-        <select name="select_main_hand">
+        <select name="select_main_hand" required>
                 <option value="" disabled selected>Main-hand</option>
             {%for item in hand_results%}              
                 <option value={{ item[1] }}>{{ item[0] }}</option>
             {% endfor %}
         </select>
 
-        <select name="select_off_hand">
+        <select name="select_off_hand" required>
                 <option value="" disabled selected>Off-hand</option>
             {%for item in hand_results%}              
                 <option value={{ item[1] }}>{{ item[0] }}</option>
             {% endfor %}
         </select>
 
-        <select name="select_belt">
+        <select name="select_belt" required>
                 <option value="" disabled selected>Belt</option>
             {%for item in belt_results%}              
                 <option value={{ item[1] }}>{{ item[0] }}</option>
