@@ -240,7 +240,10 @@ def add():
         new_main_hand_id = request.form["select_main_hand"]
         new_off_hand_id = request.form["select_off_hand"]
         new_belt_id = request.form["select_belt"]
-        add_sql = "INSERT INTO builds(build_name, body_armour_id, helmet_id, amulet_id, gloves_id, boots_id, ring_1_id, ring_2_id, main_hand_id, off_hand_id, belt_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+        add_sql = '''
+        INSERT INTO builds(build_name, body_armour_id, helmet_id, amulet_id, gloves_id, boots_id, ring_1_id, ring_2_id, main_hand_id, off_hand_id, belt_id) 
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        '''
         cursor.execute(add_sql,(new_build_name, new_body_armour_id, new_helmet_id, new_amulet_id, new_gloves_id, new_boots_id, new_ring_1_id, new_ring_2_id, new_main_hand_id, new_off_hand_id, new_belt_id))
         get_db().commit()
     
