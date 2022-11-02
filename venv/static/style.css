@@ -25,6 +25,15 @@ p {
     font-family: "Roboto";
 }
 
+li > a {
+    font-family: "Roboto";
+    color: #EAEBF2;
+}
+
+li {
+    list-style: none;
+}
+
 /* || SITEWIDE */
 
 .navigation_bar {
@@ -60,7 +69,7 @@ p {
     color: #0A0F22;
 }
 
-/* || Builds */
+/* || Build */
 
 .main_hand {
     grid-area: main_hand;
@@ -117,6 +126,7 @@ p {
     padding: 10px;
     float: left;
     border-radius: 2px;
+    margin-left: 28%;
 }
 
 .grid-container > div {
@@ -133,6 +143,14 @@ p {
     transition: 0.2s;
 }
 
+/* || Item Description */
+
 .item_data_img {
     margin-left: 20%;
+}
+
+/* || Index */
+
+.logo {
+    margin-left: 34%;
 }

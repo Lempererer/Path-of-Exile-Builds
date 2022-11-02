@@ -18,6 +18,7 @@
 
 <body>
 
+    <!-- navigation bar -->
     <div class="navigation_bar">
 
         <div class="navigation_bar_left">
@@ -31,9 +32,11 @@
         </div>
     </div>
     
-    <br><br><br>
+    <br><br><br><br>
 
     <div>
+
+        <!-- a loop which will print all the build names out in a list -->
         {%for item in build_name_results%}
         <ul>
             <li>
@@ -45,12 +48,17 @@
         {%endfor%}
     </div>
 
-    <form action="/add" method="post">
+    <br><br><br>
+
+    <!-- form to recieve user's input for new build -->
+    <form action="/add" method="post" autocomplete="off">
 
         <h2>Create a new build: </h2>
 
+        <!-- input where user can enter a new name for their build -->
         <input type="text" placeholder="Build Name" name="builds_build_name_id">
 
+        <!-- dropdown menus so that user can select the specific item they want in a build from the database -->
         <select name="select_body_armour">
                 <option value="" disabled selected>Body Armour</option>
             {%for item in body_armour_results%}              
@@ -131,8 +139,9 @@
         Please enter the build you would like to delete:
     </h2>
 
-    <form action="/delete" method="post">
-        <input type="text" name="delete_builds_build_name_id" value="">
+    <!-- form which takes the name of the build the user would like to delete -->
+    <form action="/delete" method="post" autocomplete="off">
+        <input type="text" placeholder="build name" name="delete_builds_build_name_id" value="">
         <input type="submit" value="delete">
     </form>
 
